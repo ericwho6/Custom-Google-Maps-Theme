@@ -1,0 +1,211 @@
+html, body { height: 100%; margin: 0; }
+#map { height: 100%; width: 100%; }
+
+/* The popup bubble */
+.gm-style .gm-style-iw-c {
+  background: #f2e2b8 !important;
+  border: 3px solid #8a5a2b;
+  border-radius: 10px !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+  padding: 0 !important;
+}
+
+/* The little tail pointing at the marker */
+.gm-style .gm-style-iw-tc::after {
+  background: #f2e2b8 !important;
+}
+
+/* The inner scroll area */
+.gm-style .gm-style-iw-d {
+  overflow: auto !important;
+  padding: 14px 16px 12px !important;
+}
+
+/* The close (X) button */
+.gm-ui-hover-effect > span {
+  background-color: #5a3d1e !important;
+}
+
+/* Popup contents */
+.popup {
+  max-width: 240px;
+  font-family: "IM Fell English", Georgia, serif;
+  color: #3b2a1a;
+}
+
+.popup-title {
+  margin: 0 0 2px;
+  font-family: "Pirata One", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  color: #1b2a49;
+}
+
+.popup-date {
+  display: inline-block;
+  padding: 1px 8px;
+  background: #e8b923;
+  color: #3b2a1a;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.popup-img {
+  width: 100%;
+  margin: 10px 0;
+  border: 3px solid #8a5a2b;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.popup-desc {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* Prev / Next controls */
+.popup-btn {
+  padding: 3px 10px;
+  background: #1f6f8b;
+  color: #f2e2b8;
+  border: 2px solid #1b2a49;
+  border-radius: 6px;
+  font-family: "Pirata One", Georgia, serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.popup-btn:hover {
+  background: #e8b923;
+  color: #1b2a49;
+}
+
+.popup-counter {
+  font-size: 0.85rem;
+  color: #5a3d1e;
+}
+
+/* The banner at the top of the map */
+.banner {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  padding: 8px 28px 10px;
+  text-align: center;
+  background: #f2e2b8;
+  border: 3px solid #8a5a2b;
+  outline: 2px solid #e8b923;
+  outline-offset: 3px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  pointer-events: none; /* lets you click and drag the map through it */
+}
+
+.banner h1 {
+  margin: 0;
+  font-family: "Pirata One", Georgia, serif;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #1b2a49;
+}
+
+.banner p {
+  margin: 2px 0 0;
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 0.95rem;
+  color: #5a3d1e;
+}
+
+/* Smaller on phones */
+@media (max-width: 600px) {
+  .banner {
+    padding: 6px 16px 8px;
+    width: max-content;
+    max-width: 80%;
+  }
+  .banner h1 { font-size: 1.4rem; }
+  .banner p { font-size: 0.8rem; }
+}
+
+/* Custom marker number styling */
+.marker-number {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: #d62828;
+  border: 2px solid #f2e2b8;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.marker-number {
+  pointer-events: none;
+}
+
+/* Login screen */
+#login {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f6f8b;
+}
+
+.login-box {
+  width: 300px;
+  padding: 24px;
+  text-align: center;
+  background: #f2e2b8;
+  border: 3px solid #8a5a2b;
+  outline: 2px solid #e8b923;
+  outline-offset: 3px;
+  border-radius: 8px;
+  font-family: "IM Fell English", Georgia, serif;
+  color: #3b2a1a;
+}
+
+.login-box h2 {
+  margin: 0 0 6px;
+  font-family: "Pirata One", Georgia, serif;
+  font-weight: normal;
+  font-size: 1.8rem;
+  color: #1b2a49;
+}
+
+.login-box input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 6px 0;
+  padding: 8px;
+  border: 2px solid #8a5a2b;
+  border-radius: 6px;
+  background: #fff8e1;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  background: #1f6f8b;
+  color: #f2e2b8;
+  border: 2px solid #1b2a49;
+  border-radius: 6px;
+  font-family: "Pirata One", Georgia, serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#loginError {
+  min-height: 1.2em;
+  margin: 8px 0 0;
+  color: #d62828;
+}
